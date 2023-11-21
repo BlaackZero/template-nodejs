@@ -14,11 +14,18 @@ io.on('connection', (socket) => {
 
   socket.on('playVideo', (data) => {
     io.emit('playVideo', data);
-    console.log(data);
   });
 
-  socket.on('toggleVideo', () => {
-    io.emit('toggleVideo');
+  socket.on('toggleVideoOn', () => {
+    io.emit('toggleVideoOn');
+  });
+
+  socket.on('toggleVideoOff', () => {
+    io.emit('toggleVideoOff');
+  });
+
+  socket.on('count15', () => {
+    io.emit('count15');
   });
 
   socket.on('disconnect', () => {
